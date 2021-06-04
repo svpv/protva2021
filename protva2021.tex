@@ -114,7 +114,7 @@ $O(\log{}n)$, но длины 128-254 будут кодироваться дву
 
 \section{Скорость разжатия}
 Для оценки скорости мы используем программу \verb|lzbench| на микроархитектуре Haswell.
-Скорость распаковки LZ4 на корпусе Silesia~--- около 2.6 Гб/c, нашей модификации~--- 3.7 Гб/с
+Скорость распаковки LZ4 на корпусе Silesia~--- около 2.6 Гб/c, нашей модификации~--- 3.8 Гб/с
 (скорость \verb|memcpy|~--- 8 Гб/c, память DDR3).  В обоих случаях используются похожие алгоритмы медленного сжатия.
 \begin{verbatim}
 lzbench 1.8 (64-bit Linux)  Intel(R) Celeron(R) CPU G1840 @ 2.80GHz
@@ -123,7 +123,7 @@ Assembled by P.Skibinski
 Compressor name   Compress. Decompress. Compr. size  Ratio Filename
 memcpy             8077 MB/s  7968 MB/s   211938580 100.00 12 files
 lz4hc 1.9.3 -7       31 MB/s  2677 MB/s    78102177  36.85 12 files
-relz4 0.1            28 MB/s  3741 MB/s    78126076  36.86 12 files
+relz4 0.1            28 MB/s  3853 MB/s    78126965  36.86 12 files
 \end{verbatim}
 
 \begin{thebibliography}{9}
